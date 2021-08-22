@@ -32,10 +32,11 @@ func reurl(c *gin.Context) {
 
 func main() {
 	server := gin.Default()
-	server.LoadHTMLGlob("front_end/html/*")
-	server.Static("/assets", "front_end/assets")
+	server.LoadHTMLGlob("view/*")
+	server.Static("/assets", "public/assets")
 	server.GET("/", home)
-  server.GET("/reurl", home)
-  server.POST("/reurl", reurl)
+  server.POST("/", reurl);
+  //server.GET("/reurl", home) // convert into API
+  //server.POST("/reurl", reurl)
 	server.Run(":8888")
 }
