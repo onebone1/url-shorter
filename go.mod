@@ -1,4 +1,4 @@
-module web_test
+module url-shorter
 
 go 1.16
 
